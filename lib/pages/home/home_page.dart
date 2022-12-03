@@ -12,11 +12,12 @@ class HomePage extends StatelessWidget {
       return Container(
         margin: EdgeInsets.only(
             top: defaulMargin, left: defaulMargin, right: defaulMargin),
-        child: Expanded(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "HALLO, Alex",
@@ -28,23 +29,24 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              Image.asset(
-                "assets/image_profile.png",
-                width: 54,
-              )
-            ],
-          ),
+            ),
+            Image.asset(
+              "assets/image_profile.png",
+              width: 54,
+            )
+          ],
         ),
       );
     }
 
     Widget category() {
       return Container(
-        margin: EdgeInsets.all(defaulMargin),
+        margin: EdgeInsets.only(top: defaulMargin),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
+              SizedBox(width: defaulMargin),
               Container(
                 height: 45,
                 width: 93,
@@ -98,7 +100,7 @@ class HomePage extends StatelessWidget {
                   style: subtitleTextStyle.copyWith(fontWeight: medium),
                 ),
               ),
-              const SizedBox(width: 20),
+              const SizedBox(height: 20),
             ],
           ),
         ),
@@ -107,7 +109,11 @@ class HomePage extends StatelessWidget {
 
     Widget populertextStyle() {
       return Container(
-        margin: EdgeInsets.only(left: defaulMargin, bottom: 14),
+        margin: EdgeInsets.only(
+          left: defaulMargin,
+          bottom: 14,
+          top: defaulMargin,
+        ),
         child: Text(
           "POLULER PRODUK",
           style: primarytextstyle.copyWith(
@@ -155,18 +161,15 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      backgroundColor: backgroundC1,
-      body: ListView(
-        children: [
-          header(),
-          category(),
-          populertextStyle(),
-          populerProduk(),
-          newArrivalstitle(),
-          newArrivals()
-        ],
-      ),
+    return ListView(
+      children: [
+        header(),
+        category(),
+        populertextStyle(),
+        populerProduk(),
+        newArrivalstitle(),
+        newArrivals()
+      ],
     );
   }
 }
