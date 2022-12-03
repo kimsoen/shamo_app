@@ -1,11 +1,9 @@
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:shamo/pages/home/navbar.dart';
 import 'package:shamo/theme.dart';
 
 class DetailProduct extends StatefulWidget {
-  DetailProduct({super.key});
+  const DetailProduct({super.key});
 
   @override
   State<DetailProduct> createState() => _DetailProductState();
@@ -35,10 +33,10 @@ class _DetailProductState extends State<DetailProduct> {
   Widget build(BuildContext context) {
     Widget indikator(int index) {
       return Container(
-        margin: EdgeInsets.symmetric(horizontal: 2),
+        margin: const EdgeInsets.symmetric(horizontal: 2),
         width: currenIndex == index ? 16 : 4,
         height: 4,
-        color: currenIndex == index ? primaryC : Color(0xffC4C4C4),
+        color: currenIndex == index ? primaryC : const Color(0xffC4C4C4),
       );
     }
 
@@ -105,7 +103,7 @@ class _DetailProductState extends State<DetailProduct> {
       return Container(
         width: 54,
         height: 54,
-        margin: EdgeInsets.only(left: 16),
+        margin: const EdgeInsets.only(left: 16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
           image: DecorationImage(
@@ -122,7 +120,7 @@ class _DetailProductState extends State<DetailProduct> {
         width: double.infinity,
         decoration: BoxDecoration(
           color: backgroundC1,
-          borderRadius: BorderRadius.vertical(
+          borderRadius: const BorderRadius.vertical(
             top: Radius.circular(24),
           ),
         ),
@@ -170,7 +168,7 @@ class _DetailProductState extends State<DetailProduct> {
                 left: defaulMargin,
                 right: defaulMargin,
               ),
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: backgroundC2,
                 borderRadius: BorderRadius.circular(4),
@@ -203,7 +201,7 @@ class _DetailProductState extends State<DetailProduct> {
                     style: primarytextstyle.copyWith(
                         fontSize: 14, fontWeight: semiBold),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   Text(
                     "Unpaved trails and mixed surfaces are easy when you have the traction and support you need. Casual enough for the daily commute.",
                     style: primarytextstyle,
@@ -251,9 +249,9 @@ class _DetailProductState extends State<DetailProduct> {
                             ),
                           ),
                         ),
-                        SizedBox(width: 16),
+                        const SizedBox(width: 16),
                         Expanded(
-                          child: Container(
+                          child: SizedBox(
                             height: 54,
                             child: TextButton(
                               style: TextButton.styleFrom(

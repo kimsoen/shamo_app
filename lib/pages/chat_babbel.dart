@@ -17,8 +17,8 @@ class ChatBubble extends StatelessWidget {
     Widget chatbubbleProduk() {
       return Container(
         width: 231,
-        padding: EdgeInsets.all(12),
-        margin: EdgeInsets.only(bottom: 12),
+        padding: const EdgeInsets.all(12),
+        margin: const EdgeInsets.only(bottom: 12),
         decoration: BoxDecoration(color: backgroundC5),
         child: Column(
           children: [
@@ -31,7 +31,7 @@ class ChatBubble extends StatelessWidget {
                     width: 70,
                   ),
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,7 +51,7 @@ class ChatBubble extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -66,11 +66,11 @@ class ChatBubble extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Add To Card",
                   ),
                 ),
-                SizedBox(width: 12),
+                const SizedBox(width: 12),
                 TextButton(
                   onPressed: () {},
                   style: TextButton.styleFrom(
@@ -100,7 +100,7 @@ class ChatBubble extends StatelessWidget {
           Flexible(
             child: Column(
               children: [
-                hasproduct ? chatbubbleProduk() : SizedBox(),
+                hasproduct ? chatbubbleProduk() : const SizedBox(),
                 Container(
                   constraints: BoxConstraints(
                       maxWidth: MediaQuery.of(context).size.width * 0.6),

@@ -22,7 +22,7 @@ class ProfilePage extends StatelessWidget {
                     width: 64,
                   ),
                 ),
-                SizedBox(width: 16),
+                const SizedBox(width: 16),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +62,7 @@ class ProfilePage extends StatelessWidget {
 
     Widget menuitems(String text) {
       return Container(
-        padding: EdgeInsets.only(top: 12),
+        padding: const EdgeInsets.only(top: 12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -72,7 +72,7 @@ class ProfilePage extends StatelessWidget {
                 fontSize: 13,
               ),
             ),
-            Icon(Icons.chevron_right)
+            const Icon(Icons.chevron_right)
           ],
         ),
       );
@@ -87,7 +87,7 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
                 "Account",
                 style: primarytextstyle.copyWith(
@@ -100,7 +100,7 @@ class ProfilePage extends StatelessWidget {
                   child: menuitems("Edit Profile")),
               menuitems("Your Orders"),
               menuitems("Help"),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
                 "General",
                 style: primarytextstyle.copyWith(

@@ -26,7 +26,7 @@ class NewArrivalProduct extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 12,
               ),
               Expanded(
@@ -37,7 +37,7 @@ class NewArrivalProduct extends StatelessWidget {
                       "football",
                       style: secondarytextstyle,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Text(
@@ -45,7 +45,7 @@ class NewArrivalProduct extends StatelessWidget {
                       style: primarytextstyle.copyWith(
                           fontSize: 18, fontWeight: semiBold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Text(

@@ -21,7 +21,7 @@ class CardProduk extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Image.asset(
               "assets/image_shoes.png",
               height: 150,
@@ -29,7 +29,7 @@ class CardProduk extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -37,14 +37,14 @@ class CardProduk extends StatelessWidget {
                     "hiking",
                     style: secondarytextstyle,
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                   Text(
                     "COURT VISION 2.0",
                     style: titletextstyle.copyWith(
                         fontSize: 16, fontWeight: semiBold),
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                   Text(
                     "\$58,67",
                     style: pricetextstyle.copyWith(

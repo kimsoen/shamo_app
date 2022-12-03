@@ -12,8 +12,6 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    // TODO: implement initState
-
     Timer(
       // ignore: prefer_const_constructors
       Duration(seconds: 3),
